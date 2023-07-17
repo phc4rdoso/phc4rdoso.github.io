@@ -35,3 +35,7 @@ html:
 sphinx:
   extra_extensions:
     - sphinx_proof
+    - sphinx_sitemap
+  config:
+    html_baseurl            : "https://phc4rdoso.github.io/"
+    sitemap_url_scheme      : "{link}"
