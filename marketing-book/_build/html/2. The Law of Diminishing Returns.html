@@ -406,8 +406,24 @@ document.write(`
 </section>
 <section id="marginal-returns">
 <h2>Marginal Returns<a class="headerlink" href="#marginal-returns" title="Permalink to this heading">#</a></h2>
-<p>The question of whether one should keep investing has an intrisic relationship with the future. Will I earn more if I invest more? What is the expected return for the next dollar invested? The answer to this questions often requires assuming that our investment-return function follows a parametric form, that is, and specific shape.</p>
-<p>Let’s take, for instance, the s-shaped growth curve in Fig 3. We can follow the rate of growth by taking the first derivative of that same function.</p>
+<p>The question of whether one should keep investing has an intrinsic relationship with the future. Will I earn more if I invest more? What is the expected return for the next dollar invested? The answer to this questions often requires assuming that our investment-return function follows a parametric form, that is, an specific shape.</p>
+<p>Let’s take, for instance, the s-shaped growth curve in Fig 3. We can follow the rate of return by taking the first derivative of that same function. We can write it, for the sake of simplicity, as the standard logistic function:</p>
+<div class="math notranslate nohighlight">
+\[\tag{2.2} f(x) = \frac{1}{1+e^{-x}} = \frac{e^x}{1+e^x}\]</div>
+<p>Now, taking the first derivative it will give the rate of return for that function:</p>
+<div class="math notranslate nohighlight">
+\[\tag{2.3} \frac{d}{dx} f(x) = \frac{e^x}{(1+e^x)^2}\]</div>
+<p>If we plot that function (see Fig 4), we can see that there is a clear point of maximum return rate, and after that point that rate starts to decrease.</p>
+<figure class="align-center" id="id1">
+<a class="reference internal image-reference" href="_images/22.jpg"><img alt="_images/22.jpg" src="_images/22.jpg" style="width: 416.40000000000003px; height: 286.0px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 4 </span><span class="caption-text">Return rate by several different investments. In the center of the curve we can see the maximum return rate.</span><a class="headerlink" href="#id1" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<p>Now, let’s think about these results for a little. If you recall the definition of derivative, you will remember that it is an infinitesimally small change in the <span class="math notranslate nohighlight">\(x\)</span> variable which in turn produces an infinitesimal change in <span class="math notranslate nohighlight">\(y\)</span> variable. Therefore, by taking the derivative of the investment-return curve, we are understanding how changing the investment will change the return. Recall from equation <span class="math notranslate nohighlight">\(1.4\)</span> that the division between our <span class="math notranslate nohighlight">\(\text{Return}\)</span> (also called as <em>campaign revenue</em>) and <span class="math notranslate nohighlight">\(\text{Spend}\)</span> (also called <em>campaign spend</em>) is the definition of <span class="math notranslate nohighlight">\(\text{ROAS}\)</span>. Hence, we can see that by taking the derivative of that curve we are in fact getting the change in <span class="math notranslate nohighlight">\(\text{ROAS}\)</span> for a given change in <span class="math notranslate nohighlight">\(\text{Investment}\)</span>. We call this change in <span class="math notranslate nohighlight">\(\text{ROAS}\)</span> the <em>Marginal ROAS</em>, which we’ll denote as <span class="math notranslate nohighlight">\(\text{mROAS}\)</span>. We can define then our <span class="math notranslate nohighlight">\(\text{mROAS}\)</span> as:</p>
+<div class="math notranslate nohighlight">
+\[\tag{2.4} \text{mROAS} = \lim_{\delta \to 0}\frac{\text{Return}(\text{Investment} + \delta) - \text{Return}(\text{Investment})}{\delta}\]</div>
+<p>The point on the curve on which our <span class="math notranslate nohighlight">\(\text{mROAS}=0\)</span> is the moment that there is not change in the return if we increase the investment.</p>
 <p><strong>Bibliography:</strong></p>
 <ol class="arabic simple">
 <li><p>Osenton, T. (2004). The Death of Demand: Finding Growth in a Saturated Global Economy. Financial Times Prentice Hall.</p></li>
