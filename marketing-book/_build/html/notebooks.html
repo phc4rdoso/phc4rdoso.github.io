@@ -7,8 +7,9 @@
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Content with notebooks &#8212; Mathematical Approaches for Marketing Science</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Content with notebooks &#8212; Applied Data Science in Marketing</title>
   
   
   
@@ -53,6 +54,7 @@
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
     <script src="_static/togglebutton.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script src="_static/design-tabs.js"></script>
     <script async="async" src="https://www.googletagmanager.com/gtag/js?id=G-C73ZHNGTKY"></script>
@@ -69,7 +71,7 @@ const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="_static/sphinx-thebe.js"></script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
-    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script defer="defer" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.0/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'notebooks';</script>
     <link rel="canonical" href="https://phc4rdoso.github.io/notebooks.html" />
     <link rel="index" title="Index" href="genindex.html" />
@@ -374,11 +376,11 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
                   
-  <div class="tex2jax_ignore mathjax_ignore section" id="content-with-notebooks">
+  <section class="tex2jax_ignore mathjax_ignore" id="content-with-notebooks">
 <h1>Content with notebooks<a class="headerlink" href="#content-with-notebooks" title="Permalink to this heading">#</a></h1>
 <p>You can also create content with Jupyter Notebooks. This means that you can include
 code blocks and their outputs in your book.</p>
-<div class="section" id="markdown-notebooks">
+<section id="markdown-notebooks">
 <h2>Markdown + notebooks<a class="headerlink" href="#markdown-notebooks" title="Permalink to this heading">#</a></h2>
 <p>As it is markdown, you can embed images, HTML, etc into your posts!</p>
 <p><img alt="" src="https://myst-parser.readthedocs.io/en/latest/_static/logo-wide.svg" /></p>
@@ -396,14 +398,14 @@ math blocks
 \end{aligned}
 \end{split}\]</div>
 <p>But make sure you $Escape $your $dollar signs $you want to keep!</p>
-</div>
-<div class="section" id="myst-markdown">
+</section>
+<section id="myst-markdown">
 <h2>MyST markdown<a class="headerlink" href="#myst-markdown" title="Permalink to this heading">#</a></h2>
 <p>MyST markdown works in Jupyter Notebooks as well. For more information about MyST markdown, check
 out <a class="reference external" href="https://jupyterbook.org/content/myst.html">the MyST guide in Jupyter Book</a>,
 or see <a class="reference external" href="https://myst-parser.readthedocs.io/en/latest/">the MyST markdown documentation</a>.</p>
-</div>
-<div class="section" id="code-blocks-and-outputs">
+</section>
+<section id="code-blocks-and-outputs">
 <h2>Code blocks and outputs<a class="headerlink" href="#code-blocks-and-outputs" title="Permalink to this heading">#</a></h2>
 <p>Jupyter Book will also embed your code blocks and output in your book.
 For example, here’s some sample Matplotlib code:</p>
@@ -417,7 +419,14 @@ For example, here’s some sample Matplotlib code:</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.pyplot._IonContext at 0x243eee65340&gt;
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">ModuleNotFoundError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="kn">from</span> <span class="nn">matplotlib</span> <span class="kn">import</span> <span class="n">rcParams</span><span class="p">,</span> <span class="n">cycler</span>
+<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+
+<span class="ne">ModuleNotFoundError</span>: No module named &#39;matplotlib&#39;
 </pre></div>
 </div>
 </div>
@@ -445,14 +454,11 @@ For example, here’s some sample Matplotlib code:</p>
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<img alt="_images/6952058f799b0fde3c3727ec3f3bbf1d4709ad281fb0796d2a2bfe39f970103b.png" src="_images/6952058f799b0fde3c3727ec3f3bbf1d4709ad281fb0796d2a2bfe39f970103b.png" />
-</div>
 </div>
 <p>There is a lot more that you can do with outputs (such as including interactive outputs)
 with your book. For more information about this, see <a class="reference external" href="https://jupyterbook.org">the Jupyter Book documentation</a></p>
-</div>
-</div>
+</section>
+</section>
 
     <script type="text/x-thebe-config">
     {

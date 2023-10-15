@@ -7,8 +7,9 @@
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Chapter 2: The Law of Diminishing Returns &#8212; Mathematical Approaches for Marketing Science</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Chapter 2: The Law of Diminishing Returns &#8212; Applied Data Science in Marketing</title>
   
   
   
@@ -53,6 +54,7 @@
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
     <script src="_static/togglebutton.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script src="_static/design-tabs.js"></script>
     <script async="async" src="https://www.googletagmanager.com/gtag/js?id=G-C73ZHNGTKY"></script>
@@ -69,7 +71,7 @@ const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="_static/sphinx-thebe.js"></script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
-    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script defer="defer" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.0/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = '2. The Law of Diminishing Returns';</script>
     <link rel="canonical" href="https://phc4rdoso.github.io/2. The Law of Diminishing Returns.html" />
     <link rel="index" title="Index" href="genindex.html" />
@@ -375,12 +377,12 @@ document.write(`
                 <article class="bd-article" role="main">
                   
   <p><img alt="" src="_images/chapter-2-cover.png" /></p>
-<div class="tex2jax_ignore mathjax_ignore section" id="chapter-2-the-law-of-diminishing-returns">
+<section class="tex2jax_ignore mathjax_ignore" id="chapter-2-the-law-of-diminishing-returns">
 <h1>Chapter 2: The Law of Diminishing Returns<a class="headerlink" href="#chapter-2-the-law-of-diminishing-returns" title="Permalink to this heading">#</a></h1>
 <blockquote>
 <div><p><em>Keywords for this chapter: Diminishing Returns, Marginal Returns, Marginal ROAS, Market Saturation</em></p>
 </div></blockquote>
-<div class="section" id="the-non-linearity-of-investments">
+<section id="the-non-linearity-of-investments">
 <h2>The Non-linearity of Investments<a class="headerlink" href="#the-non-linearity-of-investments" title="Permalink to this heading">#</a></h2>
 <p>An interesting behavior can be noticed on the <span class="math notranslate nohighlight">\(ROAS\)</span> calculation: we expect that the <span class="math notranslate nohighlight">\(CLV\)</span> of our customers is stable, whilst this is not the same for the <span class="math notranslate nohighlight">\(CAC\)</span>. Consequently, there is a point on which investing more will give no returns, for instance, when <span class="math notranslate nohighlight">\(ROAS &lt;1\)</span>. That’s exactly why our <span class="math notranslate nohighlight">\(ROAS\)</span> will tend to zero.</p>
 <p>Several economists have studied why that is the case, but one known factor is marketing saturation. An interesting case that illustrates this is what happened to a magazine called <em>Sports Illustrated</em> published for the first time in 1954. Since its first publication it started to increase until reach 3.5 million subscribers by the end of 1980s. One can imagine that decades later it may have doubled the amount of subscribers. Interestingly, after many years of investment it reached its natural limit (3.5 million) a where it remained at least until 2000s. Thomas G. Osenton author of <em>Death of Demand</em> explains this very briefly:</p>
@@ -390,26 +392,29 @@ document.write(`
 </div></blockquote>
 <p>We cannot expect to keep investing and receiving a proportional return always, that means that the relationsip between our investment and return is not linear (e.g. <span class="math notranslate nohighlight">\(baseline + investment \times \text{return rate}\)</span>). In reality we expect the returns to diminish after some time, because we have saturated the market, otherwise our revenue would grow towards infinity. The equation 1.6 shows that with expected behavior, that is, <span class="math notranslate nohighlight">\(CAC\)</span> increasing and our <span class="math notranslate nohighlight">\(CLV\)</span> remaining roughly the same, the total return over our investment will reach a limit. Therefore, if we would plot the total return explained by our investment, we would see the function reaching a horizontal asymptote as our investment grows towards infinity.</p>
 <p>Furthermore, there are also cases that too little investments leads to lower returns than expected. An example of this is what happens on online markting, that often uses a bidding system to determine who will see which advertisement, in that scenario an underinvested campaign may suffer due to high competition. This will lead to low returns at low investment levels.</p>
-<div class="figure align-default" id="markdown-fig">
+<figure class="align-default" id="markdown-fig">
 <img alt="investmentxreturn" src="_images/21.jpg" />
-<p class="caption"><span class="caption-number">Fig. 3 </span><span class="caption-text">Left: S-shaped curve, represents businesses that has a slower growth at low level of investments, increases quickly and then saturates. Right: Concave curve, represents businesses that grows quickly at the first investments but after certain amount of investment grows at a decreasing rate.</span><a class="headerlink" href="#markdown-fig" title="Permalink to this image">#</a></p>
-</div>
+<figcaption>
+<p><span class="caption-number">Fig. 3 </span><span class="caption-text">Left: S-shaped curve, represents businesses that has a slower growth at low level of investments, increases quickly and then saturates. Right: Concave curve, represents businesses that grows quickly at the first investments but after certain amount of investment grows at a decreasing rate.</span><a class="headerlink" href="#markdown-fig" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
 <p>We can exemplify this with the curves shown in Fig 3, in each case can be seen a point on which investing further will lead to roughly no returns. In both cases there is a point on which the market is saturated and the <span class="math notranslate nohighlight">\(ROAS\)</span> is not as it was when we started to invest. That makes sense, in most cases, when we start to invest the first people to convert are the ones that were more prone to be customers, meaning that they have a low <span class="math notranslate nohighlight">\(CAC\)</span>. Similarly we expect that as we keep investing, the easier to convert customer will already get converted and the ones that are not that prone to convert will require more effort (e.g. being exposed to an adverstisement more times) which in turn means a higher <span class="math notranslate nohighlight">\(CAC\)</span>. One can state then, by recalling equation <span class="math notranslate nohighlight">\(1.2\)</span>, that <span class="math notranslate nohighlight">\(CAC\)</span> is a function of investment and customers acquired, thereby:</p>
 <div class="math notranslate nohighlight">
 \[\tag{2.1}\lim_{(Investment, CA) \to (+\infty, n)} CAC(Investment, CA) = \frac{Investment}{CA} = \frac{\infty}{n} = \infty\]</div>
 <p>For <span class="math notranslate nohighlight">\(CA\)</span> being the number of customers acquired, <span class="math notranslate nohighlight">\(n\)</span> being any arbitrary maximum number of possible customers, and <span class="math notranslate nohighlight">\(CA, n \in I\!N\)</span>.</p>
 <p>Naturaly, one can think on which point of the investment-return curve investing more starts to be unprofitable. The analysis of this will lead to an important concept.</p>
-</div>
-<div class="section" id="marginal-returns">
+</section>
+<section id="marginal-returns">
 <h2>Marginal Returns<a class="headerlink" href="#marginal-returns" title="Permalink to this heading">#</a></h2>
-<p>Should one invest more? This question</p>
+<p>The question of whether one should keep investing has an intrisic relationship with the future. Will I earn more if I invest more? What is the expected return for the next dollar invested? The answer to this questions often requires assuming that our investment-return function follows a parametric form, that is, and specific shape.</p>
+<p>Let’s take, for instance, the s-shaped growth curve in Fig 3. We can follow the rate of growth by taking the first derivative of that same function.</p>
 <p><strong>Bibliography:</strong></p>
 <ol class="arabic simple">
 <li><p>Osenton, T. (2004). The Death of Demand: Finding Growth in a Saturated Global Economy. Financial Times Prentice Hall.</p></li>
 <li><p>Pandey, Sandeep &amp; Gupta, Snigdha &amp; Chhajed, Shubham. (2021). Marketing Mix Modeling (MMM) -Concepts and Model Interpretation. International Journal of Engineering and Technical Research. 10. 784. 10.17577/IJERTV10IS060396.</p></li>
 </ol>
-</div>
-</div>
+</section>
+</section>
 
     <script type="text/x-thebe-config">
     {

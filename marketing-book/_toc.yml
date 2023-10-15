@@ -2,7 +2,7 @@
 # Learn more at https://jupyterbook.org/customize/toc.html
 
 format: jb-book
-root: intro
+root: intro.md
 chapters:
 - file: 1. Primer on Marketing Science.ipynb
 - file: 2. The Law of Diminishing Returns.ipynb

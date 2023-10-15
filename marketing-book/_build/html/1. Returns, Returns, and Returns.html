@@ -7,8 +7,9 @@
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Chapter 1: Returns, Returns, and Returns &#8212; Mathematical Approaches for Marketing Science</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Chapter 1: Returns, Returns, and Returns &#8212; Applied Data Science in Marketing</title>
   
   
   
@@ -53,6 +54,7 @@
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
     <script src="_static/togglebutton.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script src="_static/design-tabs.js"></script>
     <script async="async" src="https://www.googletagmanager.com/gtag/js?id=G-C73ZHNGTKY"></script>
@@ -69,7 +71,7 @@ const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="_static/sphinx-thebe.js"></script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
-    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script defer="defer" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.0/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = '1. Returns, Returns, and Returns';</script>
     <link rel="canonical" href="https://phc4rdoso.github.io/1. Returns, Returns, and Returns.html" />
     <link rel="index" title="Index" href="genindex.html" />
@@ -374,13 +376,13 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
                   
-  <div class="tex2jax_ignore mathjax_ignore section" id="chapter-1-returns-returns-and-returns">
+  <section class="tex2jax_ignore mathjax_ignore" id="chapter-1-returns-returns-and-returns">
 <h1>Chapter 1: Returns, Returns, and Returns<a class="headerlink" href="#chapter-1-returns-returns-and-returns" title="Permalink to this heading">#</a></h1>
 <blockquote>
 <div><p><em>Keywords for this chapter: Profit, Return, ROAS, ROI, ROMI, NPV, CAC</em></p>
 </div></blockquote>
 <p>Welcome to the department of marketing of Small Co., a brand new company that is avid to make the difference in the market. As their new hired mathematician you are really excited to start your job and do what you love: math. You were assigned to work on their marketing department, you talk with your peers, understand more about their job, and they tell you that they just started to invest in their first online marketing channel. While you talk with them you find out something astonishing: they still don’t have a way to calculate what was the return of their investment. Your eyes starts to sparkle. You know what you will tackle first.</p>
-<div class="section" id="what-goes-around-comes-around">
+<section id="what-goes-around-comes-around">
 <h2>What goes around comes around<a class="headerlink" href="#what-goes-around-comes-around" title="Permalink to this heading">#</a></h2>
 <p>When it comes to any investment that we make in our life, we are mostly interested in what we’ll have in return. This investment can be anything: time, money, assets, and even abstract things like dedication and patience. However there’s something that is intrinsically attached to our investments: <strong>Risk</strong>. This means that given an input (assets, time, money etc.), the output (interest, a good grade on an exam etc.) is not guaranteed per se, and sometimes the investment that we made will not pay off.</p>
 <p>Marketing campaings are no different. When we want to show off our brand in a marketing channel or prospect new clients, we make an investment (e.g. we give an amount of money <span class="math notranslate nohighlight">\(x\)</span> to a marketing channel) and we expect a return (e.g. a given <span class="math notranslate nohighlight">\(y\)</span> amount of new customers). And risk is inherent to marketing investments, there is no guaranteed output. For instance, we cannot affirm that one will buy our products, become our customer or do whatever action that we would like. We go to the so-called “open sea” hoping to find the fish that we are searching for. In fact, marketing investment is tipically risked, and that is why it’s usually treated as an <a class="reference external" href="https://en.wikipedia.org/wiki/Operating_expense"><em>OPEX</em></a> instead of <a class="reference external" href="https://en.wikipedia.org/wiki/Capital_expenditure"><em>CAPEX</em></a>.</p>
@@ -391,8 +393,8 @@ document.write(`
 <p>In the 1990s the concept of <strong>ROMI</strong> (Return on Marketing Investment) started to become more popular as people wanted to distinguish the concept of <strong>ROI</strong> (Return on Investment) that adressed more general investments made by the company from the return on marketing spending. Today it’s usally called <strong>ROAS</strong> (Return on Ad Spending), which is the term that we’ll use in this book from now on. This metric basically tells us how much dollars (or any monetary unit) we received back for every dollar that we spent, this is the ratio between our spend and our revenue in the given marketing campaign.</p>
 <div class="math notranslate nohighlight">
 \[\tag{1.1} ROAS = \frac{Revenue}{Spend}\]</div>
-</div>
-<div class="section" id="the-cost-and-the-profit">
+</section>
+<section id="the-cost-and-the-profit">
 <h2>The cost and the profit<a class="headerlink" href="#the-cost-and-the-profit" title="Permalink to this heading">#</a></h2>
 <p>We can elaborate a little further on the <span class="math notranslate nohighlight">\(ROAS\)</span> concept, since for now it’s a bit generic and too simplistic. Let’s start by defining a little better what we mean by <span class="math notranslate nohighlight">\(Revenue\)</span>. Well, our revenue comes from a simple yet very used term in marketing: Net Present Value (a.k.a. NPV). We can define customer NPV as: the value today of all revenue that a customer will give to us in the future when discounted the expenses assiociated with this customer. Usually for marketing optimization we use the mean NPV, or <span class="math notranslate nohighlight">\(\overline{NPV}\)</span>, instead of calculating the NPV of each customer individually. When we have several products or services we can take the total customer NPV using the expected value formula. For instance, given a vector of <span class="math notranslate nohighlight">\(n\)</span> of NPV for each product/service <span class="math notranslate nohighlight">\(i\)</span>, and a vector <span class="math notranslate nohighlight">\(p\)</span> for the share of customers that contracted that product/service <span class="math notranslate nohighlight">\(i\)</span>, we can calculate the customer total NPV as:</p>
 <div class="math notranslate nohighlight">
@@ -411,8 +413,8 @@ document.write(`
 <div class="math notranslate nohighlight">
 \[\tag{1.6} ROAS = \frac{Revenue}{Spend} = \frac{Customers_{total} \times \overline{NPV}}{Spend} = \frac{Spend \times \overline{NPV}}{CAC} \times \frac{1}{Spend} = \frac{\overline{NPV}}{CAC}\]</div>
 <p>A lot of marketers will blindly focus on budget allocations that has a projected <span class="math notranslate nohighlight">\(ROAS=1\)</span>, therefore meaning that for every dollar spent you will receive this dollar back.</p>
-</div>
-<div class="section" id="the-roas-metric-behavior">
+</section>
+<section id="the-roas-metric-behavior">
 <h2>The ROAS metric behavior<a class="headerlink" href="#the-roas-metric-behavior" title="Permalink to this heading">#</a></h2>
 <p>With the equation <span class="math notranslate nohighlight">\(1.6\)</span> we can understand some properties of our <span class="math notranslate nohighlight">\(ROAS\)</span> metric. First of all, we can see that keeping our <span class="math notranslate nohighlight">\(\overline{NPV}\)</span> fixed our ROAS will decrease as our <span class="math notranslate nohighlight">\(CAC\)</span> increases. This increase in the <span class="math notranslate nohighlight">\(CAC\)</span> is expected due to marketing saturation effects (what we’ll see in another chapter). Given that property, for any <span class="math notranslate nohighlight">\(CAC\)</span> and fixed <span class="math notranslate nohighlight">\(\overline{NPV}\)</span>, our <span class="math notranslate nohighlight">\(ROAS\)</span> curve will have the following form:</p>
 <div class="cell tag_hide-input docutils container">
@@ -438,11 +440,11 @@ document.write(`
 </div>
 </details>
 <div class="cell_output docutils container">
-<img alt="_images/75d8f96ba0e6fbb65d1cec7ce0ab9b68e10d2a51d3d0053b7433496bc6b60c4f.png" src="_images/75d8f96ba0e6fbb65d1cec7ce0ab9b68e10d2a51d3d0053b7433496bc6b60c4f.png" />
+<img alt="_images/986c407fbba7c68ef826b4f3767c1acab555b3b522d6d5c9ed4f801cc1030a70.png" src="_images/986c407fbba7c68ef826b4f3767c1acab555b3b522d6d5c9ed4f801cc1030a70.png" />
 </div>
 </div>
-</div>
-</div>
+</section>
+</section>
 
     <script type="text/x-thebe-config">
     {
