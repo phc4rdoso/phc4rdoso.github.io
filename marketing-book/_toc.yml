@@ -8,3 +8,4 @@ parts:
     chapters:
     - file: 1. Primer on Marketing Science.ipynb
     - file: 2. The Law of Diminishing Returns.ipynb
+    - file: 3. Attribution models.ipynb
