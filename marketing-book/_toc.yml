@@ -3,6 +3,8 @@
 
 format: jb-book
 root: intro.md
-chapters:
-- file: 1. Primer on Marketing Science.ipynb
-- file: 2. The Law of Diminishing Returns.ipynb
+parts:
+  - caption: Campaign Optimization
+    chapters:
+    - file: 1. Primer on Marketing Science.ipynb
+    - file: 2. The Law of Diminishing Returns.ipynb
