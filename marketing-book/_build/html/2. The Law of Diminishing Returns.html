@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Chapter 2: The Law of Diminishing Returns &#8212; Mathematical Approaches for Marketing Science</title>
+    <title>Chapter 2: The Law of Diminishing Returns &#8212; Applied Data Science in Marketing</title>
   
   
   
@@ -54,6 +54,7 @@
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
     <script src="_static/togglebutton.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script src="_static/design-tabs.js"></script>
     <script async="async" src="https://www.googletagmanager.com/gtag/js?id=G-C73ZHNGTKY"></script>
@@ -69,10 +70,13 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.0/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = '2. The Law of Diminishing Returns';</script>
     <link rel="canonical" href="https://phc4rdoso.github.io/2. The Law of Diminishing Returns.html" />
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Chapter 3: Attribution Models" href="3.%20Attribution%20models.html" />
     <link rel="prev" title="Chapter 1: Primer on Marketing Science" href="1.%20Primer%20on%20Marketing%20Science.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
@@ -164,9 +168,11 @@ const thebe_selector_output = ".output, .cell_output"
                 </a>
             </li>
         </ul>
-        <ul class="current nav bd-sidenav">
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Campaign Optimization</span></p>
+<ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="1.%20Primer%20on%20Marketing%20Science.html">Chapter 1: Primer on Marketing Science</a></li>
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">Chapter 2: The Law of Diminishing Returns</a></li>
+<li class="toctree-l1"><a class="reference internal" href="3.%20Attribution%20models.html">Chapter 3: Attribution Models</a></li>
 </ul>
 
     </div>
@@ -360,7 +366,11 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#coming-soon">Coming Soon</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-non-linearity-of-investments">The Non-linearity of Investments</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#marginal-returns">Marginal Returns</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#point-of-diminishing-returns">Point of Diminishing Returns</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#advertising-elasticity-of-return">Advertising Elasticity of Return</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#conclusion">Conclusion</a></li>
 </ul>
             </nav>
         </div>
@@ -375,8 +385,192 @@ document.write(`
   <p><img alt="" src="_images/chapter-2-cover.png" /></p>
 <section class="tex2jax_ignore mathjax_ignore" id="chapter-2-the-law-of-diminishing-returns">
 <h1>Chapter 2: The Law of Diminishing Returns<a class="headerlink" href="#chapter-2-the-law-of-diminishing-returns" title="Permalink to this heading">#</a></h1>
-<section id="coming-soon">
-<h2>Coming Soon<a class="headerlink" href="#coming-soon" title="Permalink to this heading">#</a></h2>
+<blockquote>
+<div><p><em>Keywords for this chapter: Diminishing Returns, Marginal Returns, Marginal ROAS, Market Saturation, Elasticity</em></p>
+</div></blockquote>
+<section id="the-non-linearity-of-investments">
+<h2>The Non-linearity of Investments<a class="headerlink" href="#the-non-linearity-of-investments" title="Permalink to this heading">#</a></h2>
+<p>An interesting behavior can be noticed on the <span class="math notranslate nohighlight">\(\text{ROAS}\)</span> calculation: we expect that the <span class="math notranslate nohighlight">\(\text{CLV}\)</span> of our customers is stable, whilst this is not the same for the <span class="math notranslate nohighlight">\(\text{CAC}\)</span>. Consequently, there is a point at which investing more will give no returns, for instance, when <span class="math notranslate nohighlight">\(\text{ROAS} &lt;1\)</span>. That’s exactly why our <span class="math notranslate nohighlight">\(\text{ROAS}\)</span> will tend to zero.</p>
+<p>Several economists have studied why that is the case, but one known factor is marketing saturation. An interesting case that illustrates this is what happened to a magazine called <em>Sports Illustrated</em> published for the first time in 1954. Since its first publication, it started to increase until reached 3.5 million subscribers by the end of the 1980s. One can imagine that decades later it may have doubled the amount of subscribers. Interestingly, after many years of investment, it reached its natural limit (3.5 million) where it remained at least until the 2000s. Thomas G. Osenton author of <em>Death of Demand</em> explains this very briefly:</p>
+<blockquote class="epigraph">
+<div><p>“Every product or service has a natural consumption level. We just don’t know what it is until we launch it, distribute it, and promote it for a generation’s time (20 years or more) after which further investment to expand the universe beyond normal limits can be a futile exercise.”</p>
+<p class="attribution">—Thomas G. Osenton</p>
+</div></blockquote>
+<p>We cannot expect to keep investing and receiving a proportional return always, which means that the relationship between our investment and return is not linear (e.g. <span class="math notranslate nohighlight">\(\text{baseline} + \text{investment} \times \text{return rate}\)</span>). In reality, we expect the returns to diminish after some time, because we have saturated the market, otherwise our revenue would grow towards infinity. Equation 1.6 shows that expected behavior, with <span class="math notranslate nohighlight">\(\text{CAC}\)</span> increasing and our <span class="math notranslate nohighlight">\(\text{CLV}\)</span> remaining roughly the same, the total return over our investment will diminish towards zero. Therefore, if we plot the total return explained by our investment, we’ll see the function reaching a horizontal asymptote as our investment grows towards infinity.</p>
+<p>On the other hand, there are also cases where too few investments lead to lower returns than expected. An example of this is what happens in online marketing, which often uses a bidding system to determine who will see which advertisement. In such a scenario, an underinvested campaign may suffer due to high competition, since it will lose most of the bids. This will lead to low returns at low investment levels.</p>
+<figure class="align-default" id="markdown-fig">
+<img alt="investmentxreturn" src="_images/21.jpg" />
+<figcaption>
+<p><span class="caption-number">Fig. 3 </span><span class="caption-text">Left: S-shaped curve, represents businesses that have a slower growth at a low level of investments, increase quickly, and then saturate. Right: The concave curve represents businesses that grow quickly at the first investments but after a certain amount of investment grow at a decreasing rate.</span><a class="headerlink" href="#markdown-fig" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<p>We can exemplify this with the curves shown in Fig 3, in each case there can be seen a point on which investing further will give not much more return when compared with keeping the investment as it is. In both cases, there is a point on which the market is saturated and the <span class="math notranslate nohighlight">\(\text{ROAS}\)</span> is not as it was when we started to invest. That makes sense, in most cases, when we start to invest the first people to convert are the ones that are more prone to be customers, meaning that they have a lower <span class="math notranslate nohighlight">\(\text{CAC}\)</span>. Similarly, we expect that as we keep investing, the easily converted customers will already be converted, leaving only customers that cannot be converted as easily. These will require more effort (e.g. being exposed to an advertisement more times) which in turn means a higher <span class="math notranslate nohighlight">\(\text{CAC}\)</span>.</p>
+<p>This behavior can be derived from the definition of <span class="math notranslate nohighlight">\(\text{CAC}\)</span> in equation 1.2. For example, we can assume that we do not have a limit on the amount that we can invest, however, there is a limit to the number of people that we can convert (e.g. the number of people on earth). Therefore, if we take the limit on both factors, <span class="math notranslate nohighlight">\(\text{Investment}\)</span> and <span class="math notranslate nohighlight">\(\text{CA}\)</span> with these aspects in mind, we’ll see that our <span class="math notranslate nohighlight">\(\text{CAC}\)</span> tends towards infinity:</p>
+<div class="math notranslate nohighlight">
+\[\tag{2.1}\lim_{(Investment, CA) \to (+\infty, n)} CAC(Investment, CA) = \frac{Investment}{CA} = \frac{\infty}{n} = \infty\]</div>
+<p>For <span class="math notranslate nohighlight">\(\text{CA}\)</span> being the number of customers acquired, <span class="math notranslate nohighlight">\(n\)</span> being any arbitrary maximum number of possible customers, and <span class="math notranslate nohighlight">\(\text{CA}, n \in I\!N\)</span>.</p>
+<p>Naturally, after understanding how returns start to diminish after some time, one can think about when is the best moment to stop investing. To analyze this, we’ll introduce a new concept.</p>
+</section>
+<section id="marginal-returns">
+<h2>Marginal Returns<a class="headerlink" href="#marginal-returns" title="Permalink to this heading">#</a></h2>
+<p>The question of whether one should keep investing has an intrinsic relationship with the future. Will I earn more if I invest more? What is the expected return for the next dollar invested? The answer to this question often requires assuming that our <span class="math notranslate nohighlight">\(\text{Return}\)</span> function follows a parametric form, that is, a specific shape. Let’s take, for instance, the s-shaped growth curve in Fig 3. We can write it, for the sake of simplicity, as the standard logistic function:</p>
+<div class="math notranslate nohighlight">
+\[\tag{2.2} f(x) = \frac{1}{1+e^{-x}} = \frac{e^x}{1+e^x}\]</div>
+<p>We can follow the rate of return by taking the first derivative of that same function which will be the following:</p>
+<div class="math notranslate nohighlight">
+\[\tag{2.3} \frac{d}{dx} f(x) = \frac{e^x}{(1+e^x)^2}\]</div>
+<p>If we plot that function (Fig 4), we can see that our return rate reaches a peak and starts to diminish towards zero.</p>
+<figure class="align-center" id="id1">
+<a class="reference internal image-reference" href="_images/22.jpg"><img alt="_images/22.jpg" src="_images/22.jpg" style="width: 416.40000000000003px; height: 286.0px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 4 </span><span class="caption-text">Marginal return or marginal ROAS for several investment levels.</span><a class="headerlink" href="#id1" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<p>Now, let’s think about these results for a little. When we took the derivative, we made some kind of division, that is:</p>
+<div class="math notranslate nohighlight">
+\[\tag{2.4} \frac{d\text{Return}}{d\text{Investment}}\]</div>
+<p>We know from equation 1.4 that the division between our <span class="math notranslate nohighlight">\(\text{Return}\)</span> (also called as <em>campaign revenue</em>) and our <span class="math notranslate nohighlight">\(\text{Investment}\)</span> (also called <em>campaign spend</em>) is the definition of <span class="math notranslate nohighlight">\(\text{ROAS}\)</span>. But what is the difference between the <span class="math notranslate nohighlight">\(\text{ROAS}\)</span> and what we just made? If you recall the definition of the derivative, you will remember that it is an infinitesimally small change in the <span class="math notranslate nohighlight">\(x\)</span> variable which in turn produces an infinitesimal change in <span class="math notranslate nohighlight">\(y\)</span> variable. Therefore, by taking the derivative of the <span class="math notranslate nohighlight">\(\text{Return}\)</span> function, we are understanding how changing investment will change <span class="math notranslate nohighlight">\(\text{ROAS}\)</span>. We call this change in <span class="math notranslate nohighlight">\(\text{ROAS}\)</span> the <em>Marginal ROAS</em>, which we’ll denote as <span class="math notranslate nohighlight">\(\text{mROAS}\)</span>. We can define our <span class="math notranslate nohighlight">\(\text{mROAS}\)</span> as:</p>
+<div class="math notranslate nohighlight">
+\[
+\tag{2.5} \text{mROAS} = \lim_{\delta \to 0}\frac{\text{Return}(\text{Investment} + \delta) - \text{Return}(\text{Investment})}{\delta}
+\]</div>
+<p>The point on the curve on which our <span class="math notranslate nohighlight">\(\text{mROAS}=0\)</span> is the moment when there is no change in the return if we increase the investment, meaning that we achieved our saturation point. Note that for several types of curves the exact point on which <span class="math notranslate nohighlight">\(\text{mROAS}=0\)</span> (including the one in our example) does not necessarily exist, however, it is important to know the increment that one will have in return if spending more. In case we have to choose between investing in campaign A or campaign B, we’ll likely be willing to invest in the one with the highest marginal return.</p>
+<p>One important thing to notice is that there is no exact relationship between <span class="math notranslate nohighlight">\(\text{mROAS}\)</span> and <span class="math notranslate nohighlight">\(\text{ROAS}\)</span> in the sense that we cannot expect our <span class="math notranslate nohighlight">\(\text{ROAS}\)</span> to always have a specific value at a given <span class="math notranslate nohighlight">\(\text{mROAS}\)</span>. This fact shows why it is not advisable to choose an investment based solely on <span class="math notranslate nohighlight">\(\text{ROAS}\)</span>, because you can have a great <span class="math notranslate nohighlight">\(\text{ROAS}\)</span> but be already past the optimal <span class="math notranslate nohighlight">\(\text{mROAS}\)</span> threshold.</p>
+<div class="proof example admonition" id="example-0">
+<p class="admonition-title"><span class="caption-number">Example 3 </span></p>
+<section class="example-content" id="proof-content">
+<p>Let’s say that we have invested <span class="math notranslate nohighlight">\(500\)</span> and had <span class="math notranslate nohighlight">\(952.57\)</span> back in revenue from it. That is:</p>
+<div class="math notranslate nohighlight">
+\[f(500) = 952.57\]</div>
+<p>We can see from this relationship that our <span class="math notranslate nohighlight">\(\text{ROAS}\)</span> was:</p>
+<div class="math notranslate nohighlight">
+\[\text{ROAS} = \frac{952.57}{500} = 1.91\]</div>
+<p>A common question in this case is: should I invest more? A naive investor should assume that this campaign is highly profitable since we get almost twice the money we spend. However, it depends on the form that we expect our investment-return curve to have. Let’s assume in this example that the curve has the following form:</p>
+<div class="math notranslate nohighlight">
+\[f(x) = \frac{1000}{1+e^{-0.01(x-200)}}\]</div>
+<p>Assuming that our curve has this specific shape, by taking the first derivative of it we’ll visualize the <span class="math notranslate nohighlight">\(\text{mROAS}\)</span>. Now taking the first derivative:</p>
+<div class="math notranslate nohighlight">
+\[\frac{d}{dx} f(x) = \frac{10 \times \text{exp}(-0.01(-200+x))}{1+\text{exp}(-0.01(-200+x))^2} \newline\]</div>
+<p>Now when setting <span class="math notranslate nohighlight">\(x:=500\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[\frac{10 \times \text{exp}(-0.01(-200+500))}{1+\text{exp}(-0.01(-200+500))^2} = 0.45\]</div>
+<p>We can see that even if our campaign returns almost twice what we invested, we are relatively close to our saturation point, since <span class="math notranslate nohighlight">\(\text{mROAS} \approx 0\)</span>. With this information, we can choose to invest in another campaign on which the <span class="math notranslate nohighlight">\(\text{mROAS}\)</span> is greater.</p>
+<figure class="align-center" id="id2">
+<a class="reference internal image-reference" href="_images/23.jpg"><img alt="_images/23.jpg" src="_images/23.jpg" style="width: 710.4px; height: 228.6px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 5 </span><span class="caption-text">Return, ROAS, and mROAS for an investment of 500</span><a class="headerlink" href="#id2" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<p>In the figure above we can see the relationship between our <span class="math notranslate nohighlight">\(\text{Return}\)</span>, <span class="math notranslate nohighlight">\(\text{ROAS}\)</span>, and <span class="math notranslate nohighlight">\(\text{mROAS}\)</span> which may not be obvious at first. However, it is important to state that this is very relative to the shape that we assume our <span class="math notranslate nohighlight">\(f(x)\)</span> to have.</p>
+</section>
+</div></section>
+<section id="point-of-diminishing-returns">
+<h2>Point of Diminishing Returns<a class="headerlink" href="#point-of-diminishing-returns" title="Permalink to this heading">#</a></h2>
+<p>Another important point on the curve in Fig 4 is the point of maximum marginal return. We can see that before that given point, the marginal return is increasing, and after that point, it starts to decrease. What is the exact meaning of this threshold? We can this point <em>the point of diminishing returns</em> and is the point on which we start to observe our results diminishing.</p>
+<p>Obviously, that point depends on the form that we assume our curve to have, and depending on its format, it will not always have a straightforward point of diminishing returns. Why that is the case? Well, the point of diminishing returns is the point on which the curve changes its concavity from up to down, and not all curves have this property (e.g. the curve on the right in Fig 3) since some of them already diminish from the start. However, when this point exists, we can find it by taking the second derivative of the investment-return curve. Let’s go back to our example in equation 2.2 and calculate the second derivative of it:</p>
+<div class="math notranslate nohighlight">
+\[
+\tag{2.6} \frac{d^2}{dx^2} f(x) = \frac{-e^x \times e^x-1}{(e^x +1)^3}
+\]</div>
+<p>The point of diminishing returns is the point on which the result of the equation above is zero. If we plot this for the standard logistic curve, well see something as the Fig 6.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>For practical reasons, we are assuming that your curve will always be asymptotically increasing, which in reality we expect to be true.</p>
+</div>
+<figure class="align-center" id="id3">
+<a class="reference internal image-reference" href="_images/24.jpg"><img alt="_images/24.jpg" src="_images/24.jpg" style="width: 416.40000000000003px; height: 286.0px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 6 </span><span class="caption-text">2nd derivative of the return function. The point on which y=0 is the point of diminishing returns</span><a class="headerlink" href="#id3" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<div class="proof example admonition" id="example-1">
+<p class="admonition-title"><span class="caption-number">Example 4 </span></p>
+<section class="example-content" id="proof-content">
+<p>Going back to the previous example, we assumed that our <span class="math notranslate nohighlight">\(\text{Return}\)</span> function would have the following form:</p>
+<div class="math notranslate nohighlight">
+\[f(x) = \frac{1000}{1+e^{-0.01(x-200)}}\]</div>
+<p>We can find its point of diminishing returns, by taking the second derivative of it:</p>
+<div class="math notranslate nohighlight">
+\[\frac{d^2}{dx^2} f(x) = 10\Bigg(\frac{0.02e^{-0.02(-200+x)}}{(1+e^{-0.01(-200+x)})^3} - \frac{0.01e^{-0.02(-200+x)}}{(1+e^{-0.01(-200+x)})^2}\Bigg)\]</div>
+<p>Now setting <span class="math notranslate nohighlight">\(x:=0\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[10\Bigg(\frac{0.02e^{-0.02(-200)}}{(1+e^{-0.01(-200)})^3} - \frac{0.01e^{-0.02(-200)}}{(1+e^{-0.01(-200)})^2}\Bigg) = 200\]</div>
+<p>We can see that <span class="math notranslate nohighlight">\(200\)</span> is the peak of our <span class="math notranslate nohighlight">\(\text{mROAS}\)</span> function, and the point on our <span class="math notranslate nohighlight">\(\text{Return}\)</span> function on which its curvature changes.</p>
+<figure class="align-center" id="id4">
+<a class="reference internal image-reference" href="_images/25.jpg"><img alt="_images/25.jpg" src="_images/25.jpg" style="width: 710.4px; height: 228.6px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 7 </span><span class="caption-text">Point of diminishing returns for an s-shaped curve.</span><a class="headerlink" href="#id4" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+</section>
+</div><p>The point of diminishing returns is not necessarily the point on which we must stop investing further, however, it is important to know when we expect our returns to start to diminish. Treat it like the peak of a roller coaster, it is a worth to remembered moment, but doesn’t mean that the ride is over yet.</p>
+</section>
+<section id="advertising-elasticity-of-return">
+<h2>Advertising Elasticity of Return<a class="headerlink" href="#advertising-elasticity-of-return" title="Permalink to this heading">#</a></h2>
+<p>The last important concept that we’ll describe is related to how much more <span class="math notranslate nohighlight">\(\%\text{Return}\)</span> we expect back if we increase a given <span class="math notranslate nohighlight">\(\%\text{Investment}\)</span>. When we are interested in measuring the responsiveness of one variable over another, we are talking about measuring our elasticity. In our case, for instance, one can imagine: if I increase my <span class="math notranslate nohighlight">\(\text{Investment}\)</span> in <span class="math notranslate nohighlight">\(1\%\)</span>, what will be the response in <span class="math notranslate nohighlight">\(\text{Return}\)</span>?</p>
+<p>To measure the elasticity, that is, the responsiveness of our curve, we must have a starting point in <span class="math notranslate nohighlight">\(\text{Investment}\)</span> from which we want to move on. From that point, we measure the difference between our starting point and the desired point of investment, <span class="math notranslate nohighlight">\(\Delta\text{Investment}\)</span>, and the difference between the <span class="math notranslate nohighlight">\(\text{Return}\)</span> at that point and the desired point, <span class="math notranslate nohighlight">\(\Delta\text{Return}\)</span>. With that information, we calculate the elasticity as:</p>
+<div class="math notranslate nohighlight">
+\[
+\tag{2.7} \epsilon = \frac{\frac{\Delta\text{Return}}{\text{Return}}}{\frac{\Delta\text{Investment}}{\text{Investment}}} = \frac{\Delta\text{Return}}{\text{Return}}\frac{\text{Investment}}{\Delta\text{Investment}}
+\]</div>
+<p>We expect that since our <span class="math notranslate nohighlight">\(\text{Return}\)</span> function is asymptotically increasing, our <span class="math notranslate nohighlight">\(\epsilon \in [0, +\infty)\)</span>. Below we can find a table that will help to interpret the resultant elasticity.</p>
+<div class="tip admonition">
+<p class="admonition-title">How to interpret <span class="math notranslate nohighlight">\(\epsilon\)</span></p>
+<p>When <span class="math notranslate nohighlight">\(\epsilon = 0\)</span>:</p>
+<ul class="simple">
+<li><p>That means that the <span class="math notranslate nohighlight">\(\Delta\text{Return} = 0\)</span>, that is, we had no change when increasing the <span class="math notranslate nohighlight">\(\text{Investment}\)</span>. It means that there is no advantage in increasing the investment since there was no response.</p></li>
+</ul>
+<p>When <span class="math notranslate nohighlight">\(0 \lt \epsilon \lt 1\)</span></p>
+<ul class="simple">
+<li><p>A moderate response, that means that <span class="math notranslate nohighlight">\(\Delta\text{Return} \gt 0\)</span>. However, the <span class="math notranslate nohighlight">\(\%\text{Return}\)</span> increased was lower than <span class="math notranslate nohighlight">\(\%\text{Investment}\)</span> increased.</p></li>
+</ul>
+<p>When <span class="math notranslate nohighlight">\(\epsilon = 1\)</span></p>
+<ul class="simple">
+<li><p>An exact response of the increase in <span class="math notranslate nohighlight">\(\%\text{Investment}\)</span> and the increase in <span class="math notranslate nohighlight">\(\%\text{Return}\)</span>. This is expected as we get closer to the point of diminishing returns.</p></li>
+</ul>
+<p>When <span class="math notranslate nohighlight">\(\epsilon \gt 1\)</span></p>
+<ul class="simple">
+<li><p>Means that the increase in <span class="math notranslate nohighlight">\(\%\text{Return}\)</span> was greater than increase in <span class="math notranslate nohighlight">\(\%\text{Investment}\)</span>. This is the best scenario for investing, and it is expected way before the point of diminishing returns.</p></li>
+</ul>
+</div>
+<div class="proof example admonition" id="example-2">
+<p class="admonition-title"><span class="caption-number">Example 5 </span></p>
+<section class="example-content" id="proof-content">
+<p>Let’s take the values that we observed in the previous examples in this chapter and calculate the elasticity for them. First, let’s say that we want to move from investing <span class="math notranslate nohighlight">\(150\)</span> to <span class="math notranslate nohighlight">\(200\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[\Delta\text{Investment} = 200 - 150 = 50\]</div>
+<div class="math notranslate nohighlight">
+\[\Delta\text{Return} = 500 - 377.54 = 122.45\]</div>
+<p>Then our elasticity is:</p>
+<div class="math notranslate nohighlight">
+\[\epsilon = \frac{122.45}{377.54} \frac{150}{50} \approx 0.97\]</div>
+<p>We see a good responsiveness, which is expected, but since we are close to the point of diminishing returns our <span class="math notranslate nohighlight">\(\epsilon &lt; 1\)</span> .</p>
+<p>Now let’s simulate moving from investing <span class="math notranslate nohighlight">\(550\)</span> to <span class="math notranslate nohighlight">\(600\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[\Delta\text{Investment} = 600 - 550 = 50\]</div>
+<div class="math notranslate nohighlight">
+\[\Delta\text{Return} = 982.01 - 970.68 = 11.32\]</div>
+<p>Then our elasticity is:</p>
+<div class="math notranslate nohighlight">
+\[\epsilon = \frac{11.32}{970.68} \frac{550}{50} \approx 0.12\]</div>
+<p>The responsiveness is not so good as we see when comparing to moving from <span class="math notranslate nohighlight">\(150\)</span> to <span class="math notranslate nohighlight">\(200\)</span>. This happens because we are far off from the point of diminishing returns.</p>
+</section>
+</div><p>Elasticity is very useful when deciding to increase investment in a marketing campaign. However, there are a couple of factors that may affect the elasticity such as:</p>
+<ul class="simple">
+<li><p>How new the product/service is to the market</p></li>
+<li><p>Quality of advertisement</p></li>
+<li><p>Advertisement by competitors</p></li>
+</ul>
+</section>
+<section id="conclusion">
+<h2>Conclusion<a class="headerlink" href="#conclusion" title="Permalink to this heading">#</a></h2>
+<p>We started by understanding that the return on investment is not linear since we expect a saturation effect. Afterwards we understood the effect of diminishing returns and how the marginal return on spend <span class="math notranslate nohighlight">\(\text{(mROAS})\)</span> reflect the return saturation. We learned how to find the point on which our returns start to diminish and how to measure the responsiveness of an increase in <span class="math notranslate nohighlight">\(\text{Investment}\)</span>.</p>
+<p>You might be wondering how to calculate your own <span class="math notranslate nohighlight">\(\text{Return}\)</span> curves, which is an important topic that will be covered later. However, firstly we must be able to correctly attribute a sale (or any success event) to the correct marketing campaign. Therefore, we’ll take a look at how attribution models work.</p>
+<p><strong>Bibliography:</strong></p>
+<ol class="arabic simple">
+<li><p>Osenton, T. (2004). The Death of Demand: Finding Growth in a Saturated Global Economy. Financial Times Prentice Hall.</p></li>
+<li><p>Pandey, Sandeep &amp; Gupta, Snigdha &amp; Chhajed, Shubham. (2021). Marketing Mix Modeling (MMM) -Concepts and Model Interpretation. International Journal of Engineering and Technical Research. 10. 784. 10.17577/IJERTV10IS060396.</p></li>
+</ol>
 </section>
 </section>
 
@@ -420,6 +614,15 @@ document.write(`
         <p class="prev-next-title">Chapter 1: Primer on Marketing Science</p>
       </div>
     </a>
+    <a class="right-next"
+       href="3.%20Attribution%20models.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Chapter 3: Attribution Models</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
 </div></div>
   
 </div>
@@ -438,7 +641,11 @@ document.write(`
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#coming-soon">Coming Soon</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-non-linearity-of-investments">The Non-linearity of Investments</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#marginal-returns">Marginal Returns</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#point-of-diminishing-returns">Point of Diminishing Returns</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#advertising-elasticity-of-return">Advertising Elasticity of Return</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#conclusion">Conclusion</a></li>
 </ul>
   </nav></div>
 
