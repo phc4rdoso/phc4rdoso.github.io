@@ -9,3 +9,20 @@ parts:
     - file: 1. Primer on Marketing Science.ipynb
     - file: 2. The Law of Diminishing Returns.ipynb
     - file: 3. Attribution models.ipynb
+    - file: 4. Market Mix Modeling.ipynb
+    - file: 5. MMM with Robyn.ipynb
+    - file: 6. MMM with LightWeight.ipynb
+  - caption: Experimentation in Marketing
+    chapters:
+    - file: 7. A primer on Experimentation.ipynb
+    - file: 8. AB Testing.ipynb
+    - file: 9. Heterogeneous Treatment Effects.ipynb
+  - caption: Quasi-experiments
+    chapters:
+    - file: 10. A primer on Quasi-experiments.ipynb
+    - file: 11. Synthetic Controls.ipynb
+    - file: 12. Regression Discontinuity.ipynb
+    - file: 13. Interrupted Time Series.ipynb
+  - caption: Wrap up
+    chapters:
+    - file: 14. The future of marketing science.ipynb
