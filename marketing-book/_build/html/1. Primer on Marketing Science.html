@@ -1,13 +1,12 @@
 
-
 <!DOCTYPE html>
 
 
-<html lang="en" >
+<html lang="en" data-content_root="./" >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <title>Chapter 1: Primer on Marketing Science &#8212; Applied Data Science in Marketing</title>
   
@@ -15,48 +14,49 @@
   
   <script data-cfasync="false">
     document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
-    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
   </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
-<link href="_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
-<link href="_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link href="_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
 
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=a3416100" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="_static/proof.css?v=b4b7a797" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
   
-  <link href="_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
-  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
-
-    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
-    <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
-    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
-    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
-    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
-    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="_static/proof.css" />
-    <link rel="stylesheet" type="text/css" href="_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
-  
+  <!-- So that users can add custom icons -->
+  <script src="_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
-<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
 
-    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
-    <script src="_static/jquery.js"></script>
-    <script src="_static/underscore.js"></script>
-    <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
-    <script src="_static/doctools.js"></script>
-    <script src="_static/clipboard.min.js"></script>
-    <script src="_static/copybutton.js"></script>
-    <script src="_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script src="_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="_static/doctools.js?v=9a2dae69"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="_static/copybutton.js?v=f281be69"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
-    <script src="_static/togglebutton.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="_static/togglebutton.js?v=4a39c7ea"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
-    <script src="_static/design-tabs.js"></script>
+    <script src="_static/design-tabs.js?v=36754332"></script>
     <script async="async" src="https://www.googletagmanager.com/gtag/js?id=G-C73ZHNGTKY"></script>
     <script>
                 window.dataLayer = window.dataLayer || [];
@@ -64,15 +64,20 @@
                 gtag('js', new Date());
                 gtag('config', 'G-C73ZHNGTKY');
             </script>
-    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
-const thebe_selector = ".thebe,.cell"
-const thebe_selector_input = "pre"
-const thebe_selector_output = ".output, .cell_output"
-</script>
-    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){ dataLayer.push(arguments); }
+                gtag('js', new Date());
+                gtag('config', 'G-C73ZHNGTKY');
+            </script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.0/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = '1. Primer on Marketing Science';</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
     <link rel="canonical" href="https://phc4rdoso.github.io/1. Primer on Marketing Science.html" />
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
@@ -80,6 +85,7 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="prev" title="Preface" href="intro.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="" />
   </head>
   
   
@@ -87,23 +93,16 @@ const thebe_selector_output = ".output, .cell_output"
 
   
   
-  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
   
-  <input type="checkbox"
-          class="sidebar-toggle"
-          name="__primary"
-          id="__primary"/>
-  <label class="overlay overlay-primary" for="__primary"></label>
+  <div id="pst-scroll-pixel-helper"></div>
   
-  <input type="checkbox"
-          class="sidebar-toggle"
-          name="__secondary"
-          id="__secondary"/>
-  <label class="overlay overlay-secondary" for="__secondary"></label>
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
   
-  <div class="search-button__wrapper">
-    <div class="search-button__overlay"></div>
-    <div class="search-button__search-container">
+  <dialog id="pst-search-dialog">
+    
 <form class="bd-search d-flex align-items-center"
       action="search.html"
       method="get">
@@ -111,7 +110,6 @@ const thebe_selector_output = ".output, .cell_output"
   <input type="search"
          class="form-control"
          name="q"
-         id="search-input"
          placeholder="Search this book..."
          aria-label="Search this book..."
          autocomplete="off"
@@ -119,16 +117,25 @@ const thebe_selector_output = ".output, .cell_output"
          autocapitalize="off"
          spellcheck="false"/>
   <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
-</form></div>
-  </div>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
   
-    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
-    </nav>
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
   
+
   <div class="bd-container">
     <div class="bd-container__inner bd-page-width">
       
-      <div class="bd-sidebar-primary bd-sidebar">
+      
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
         
 
   
@@ -141,9 +148,13 @@ const thebe_selector_output = ".output, .cell_output"
   
     <div class="sidebar-primary-items__start sidebar-primary__section">
         <div class="sidebar-primary-item">
+
+  
+    
   
 
 <a class="navbar-brand logo" href="intro.html">
+  
   
   
   
@@ -153,12 +164,19 @@ const thebe_selector_output = ".output, .cell_output"
       
     
     
-    <img src="_static/logo.png" class="logo__image only-light" alt="Logo image"/>
-    <script>document.write(`<img src="_static/logo.png" class="logo__image only-dark" alt="Logo image"/>`);</script>
+    <img src="_static/logo.png" class="logo__image only-light" alt="Applied Data Science in Marketing - Home"/>
+    <img src="_static/logo.png" class="logo__image only-dark pst-js-only" alt="Applied Data Science in Marketing - Home"/>
   
   
 </a></div>
-        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+        <div class="sidebar-primary-item">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         
         <ul class="nav bd-sidenav bd-sidenav__home-link">
@@ -201,14 +219,19 @@ const thebe_selector_output = ".output, .cell_output"
   
   
   <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
   </div>
-  
-  <div id="rtd-footer-container"></div>
 
 
       </div>
       
-      <main id="main-content" class="bd-main">
+      <main id="main-content" class="bd-main" role="main">
         
         
 
@@ -217,14 +240,14 @@ const thebe_selector_output = ".output, .cell_output"
           <div class="bd-content">
             <div class="bd-article-container">
               
-              <div class="bd-header-article">
+              <div class="bd-header-article d-print-none">
 <div class="header-article-items header-article__inner">
   
     <div class="header-article-items__start">
       
-        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
   <span class="fa-solid fa-bars"></span>
-</label></div>
+</button></div>
       
     </div>
   
@@ -346,26 +369,20 @@ const thebe_selector_output = ".output, .cell_output"
 </button>
 
 
-<script>
-document.write(`
-  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
-    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
-    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
-  </button>
-`);
-</script>
 
-<script>
-document.write(`
-  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="fa-solid fa-magnifying-glass"></i>
-  </button>
-`);
-</script>
-<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button>
+
+
+<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+</button>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <span class="fa-solid fa-list"></span>
-</label>
+</button>
 </div></div>
       
     </div>
@@ -402,16 +419,16 @@ document.write(`
               
                 
 <div id="searchbox"></div>
-                <article class="bd-article" role="main">
+                <article class="bd-article">
                   
   <p><img alt="" src="_images/chapter-1-cover.png" /></p>
 <section class="tex2jax_ignore mathjax_ignore" id="chapter-1-primer-on-marketing-science">
-<h1>Chapter 1: Primer on Marketing Science<a class="headerlink" href="#chapter-1-primer-on-marketing-science" title="Permalink to this heading">#</a></h1>
+<h1>Chapter 1: Primer on Marketing Science<a class="headerlink" href="#chapter-1-primer-on-marketing-science" title="Link to this heading">#</a></h1>
 <blockquote>
 <div><p><em>Keywords for this chapter: Marketing Science, CLV, CLTV, ROI, ROAS, ROMI, CAC</em></p>
 </div></blockquote>
 <section id="what-is-marketing-science-anyway">
-<h2>What is Marketing Science Anyway?<a class="headerlink" href="#what-is-marketing-science-anyway" title="Permalink to this heading">#</a></h2>
+<h2>What is Marketing Science Anyway?<a class="headerlink" href="#what-is-marketing-science-anyway" title="Link to this heading">#</a></h2>
 <p>Marketing activities existed for a long time, but some scholars agree that it had its formal start after the end of the Second World War in 1945 in response to the high competition that arose from that time on. Given that scenario, methods and research conducted in other fields like management science and engineering started to get their first applications in marketing. Mathematical methods, psychological studies, and fields that were formerly unrelated to marketing started to get their first applications in optimizing marketing endeavors. At the time, the computational power and data available were nothing compared with what we have today. Today you were probably already impacted by the efforts of marketing science. For instance, when doing a Google search you probably saw “promoted” websites as the top recommended answers to your search. That was not randomly suggested to you, a lot of mathematical methods aligned with business logic were processed to deliver the exactly promoted websites to you. Also when buying something online, you probably saw a section with other “recommended” products. In a nutshell, this is part of what marketing science is. I like to quote <a class="reference external" href="https://www.facebook.com/facebookcareers/videos/296529144406713/">Meta’s marketing science department definition</a>:</p>
 <blockquote class="epigraph">
 <div><p>“Marketing Science transforms marketing efforts so that they are grounded in data and science”</p>
@@ -420,7 +437,7 @@ document.write(`
 <p>We agree that science is a broad term, so the first thing that we’re going to align from now on is in which scientific part of marketing we’re going to focus on: the mathematical part. Hence, we’re going to focus on mathematical methods for optimizing, transforming, and understanding marketing efforts. These methods will range from very simple heuristics (like the ones that we’ll see in this chapter) to more complex mathematical models and algorithms. With that goal in mind, we’ll dive into the first basic concepts of Marketing.</p>
 </section>
 <section id="basic-concepts-for-understanding-marketing-endeavours">
-<h2>Basic Concepts for Understanding Marketing Endeavours<a class="headerlink" href="#basic-concepts-for-understanding-marketing-endeavours" title="Permalink to this heading">#</a></h2>
+<h2>Basic Concepts for Understanding Marketing Endeavours<a class="headerlink" href="#basic-concepts-for-understanding-marketing-endeavours" title="Link to this heading">#</a></h2>
 <p>There are a couple of basic metrics that are very useful when working with any kind of business. That is a lot of them, but for now, we’ll focus on the ones that are more useful for this session, and dive more into the others as they are necessary. These metrics are:</p>
 <ul class="simple">
 <li><p>Customer Lifetime Value (CLV)</p></li>
@@ -428,8 +445,8 @@ document.write(`
 <li><p>Return on Advertisement Spend (ROAS)</p></li>
 </ul>
 <section id="customer-lifetime-value">
-<h3>Customer Lifetime Value<a class="headerlink" href="#customer-lifetime-value" title="Permalink to this heading">#</a></h3>
-<p>What is the “value” of a customer<a class="footnote-reference brackets" href="#id2" id="id1">1</a>? This is usually the first question that you would like to answer when analyzing any business, mainly subscription-based ones (e.g. SaaS). The word value can have several definitions, but usually, when answering this question, we are interested in the net profit that our relationship with the customer will bring to the business. When we have this in mind we are usually talking about the <em>Customer Lifetime Value</em> or <em>CLV</em>. We can define the CLV as: “The present value of the future cash flows attributed to the customer during his/her entire relationship with the company”. So it basically means how much net profit we expect from this customer during his entire relationship with us, or in his relationship with us after a given period of time</p>
+<h3>Customer Lifetime Value<a class="headerlink" href="#customer-lifetime-value" title="Link to this heading">#</a></h3>
+<p>What is the “value” of a customer<a class="footnote-reference brackets" href="#id2" id="id1" role="doc-noteref"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a>? This is usually the first question that you would like to answer when analyzing any business, mainly subscription-based ones (e.g. SaaS). The word value can have several definitions, but usually, when answering this question, we are interested in the net profit that our relationship with the customer will bring to the business. When we have this in mind we are usually talking about the <em>Customer Lifetime Value</em> or <em>CLV</em>. We can define the CLV as: “The present value of the future cash flows attributed to the customer during his/her entire relationship with the company”. So it basically means how much net profit we expect from this customer during his entire relationship with us, or in his relationship with us after a given period of time</p>
 <p>You can find out there a lot of fancy and complex forms for calculating the CLV, for the sake of simplicity we’ll use a simpler version. There are a couple factors that we need to take into account when calculating the CLV. The first one is the <em>Average Customer Revenue</em> (<span class="math notranslate nohighlight">\(\overline{Revenue}\)</span>), which represents the gross revenue that we get on average by each customer in a given period of time <span class="math notranslate nohighlight">\(i\)</span>. The second factor is the <em>Gross Margin</em> (<span class="math notranslate nohighlight">\(GM\)</span>) that basically is the percentage of the gross revenue that is considered profit to the business, after discounting all the operational costs necessary for having that customer (e.g. product production cost, retention cost etc). The last one is the <em>Churn Rate</em> (<span class="math notranslate nohighlight">\(CR\)</span>), which is the percentage of customers that after a given period of time <span class="math notranslate nohighlight">\(i\)</span> are expected to end their relationship with us (or the probability that this customer will churn after a given period of time <span class="math notranslate nohighlight">\(i\)</span>).</p>
 <p>With these factors in mind, we can define a simple version of CLV as:</p>
 <div class="math notranslate nohighlight">
@@ -460,7 +477,7 @@ document.write(`
 <figure class="align-center" id="id3">
 <a class="reference internal image-reference" href="_images/11.jpg"><img alt="_images/11.jpg" src="_images/11.jpg" style="width: 445.6px; height: 302.8px;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 1 </span><span class="caption-text">Geometric distribution showing the probability of a customer churning for each year</span><a class="headerlink" href="#id3" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 1 </span><span class="caption-text">Geometric distribution showing the probability of a customer churning for each year</span><a class="headerlink" href="#id3" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 <p>Note that a geometric distribution assumes independence between each <span class="math notranslate nohighlight">\(i\)</span>, which may not be a fair assumption since the chances of a customer churning do not remain the same every year.</p>
@@ -468,7 +485,7 @@ document.write(`
 <p>Obviously, this is a very naive estimator, fancier and more exact ways to calculate it take into account that our <span class="math notranslate nohighlight">\(\overline{Revenue}\)</span>, <span class="math notranslate nohighlight">\(GM\)</span>, and <span class="math notranslate nohighlight">\(CR\)</span> are not the same for each period <span class="math notranslate nohighlight">\(i\)</span>. For instance, one can find the assumption that your <span class="math notranslate nohighlight">\(\overline{Revenue}\)</span> by the customer for the year 2022 will be equal to the year 2023 a strong one. Furthermore, mainly for young companies it is not advisable to extrapolate your current results too long over time (i.e. have a high <span class="math notranslate nohighlight">\(n\)</span>), since you expect, naturally, that the situation of your business will be quite different in <span class="math notranslate nohighlight">\(n \times i\)</span> periods. Another fact that we didn’t take into account is the <em>discount</em> or <em>cost of capital</em> factor. More complex and correct ways to calculate <span class="math notranslate nohighlight">\(CLV\)</span> will be covered as necessary, but for now, we must mind our assumptions with this simple model.</p>
 </section>
 <section id="customer-acquisition-cost">
-<h3>Customer Acquisition Cost<a class="headerlink" href="#customer-acquisition-cost" title="Permalink to this heading">#</a></h3>
+<h3>Customer Acquisition Cost<a class="headerlink" href="#customer-acquisition-cost" title="Link to this heading">#</a></h3>
 <p>This concept is maybe the most straightforward one. In any kind of marketing, you aim to prospect new customers. But this comes at a cost, you need to buy the attention of these potential new customers. For instance, let’s get back to the example at the beginning of the chapter. A company had to pay to appear in the promoted session of your search engine. This <em>spend</em> has a crucial role in marketing campaigns, since the more customers you prospect with the lower the spend possible the better. In order words, given that <span class="math notranslate nohighlight">\(CA\)</span> is the number of acquired customers due to the marketing campaign, the lower the ratio <span class="math notranslate nohighlight">\(Spend:CA\)</span> the better. Hence, our <em>Customer Acquisition Cost</em> or <em>CAC</em> can be intuitively defined as:</p>
 <div class="math notranslate nohighlight">
 \[\tag{1.2} CAC = \frac{Spend}{CA}\]</div>
@@ -479,10 +496,21 @@ document.write(`
 <div class="math notranslate nohighlight">
 \[CAC = \frac{5250}{642} = 8.17\]</div>
 </section>
-</div><p>One can also notice that the ratio of <span class="math notranslate nohighlight">\(CLV\)</span> to <span class="math notranslate nohighlight">\(CAC\)</span> is also important, it basically how much times expected value of that customer is greater than the cost to acquire that customer. The intuition of this relationship naturally bring us to the next basic concept.</p>
+</div><div class="warning admonition">
+<p class="admonition-title">Types of cost</p>
+<p>When we are talking about costs, its is important to distinguish between the types of costs that we may have. There are some costs that are fixed, this fixed cost <strong>FC</strong> is not related with the amount of units you produce of a selling item, or the number of customers you acquire. This type of cost include things like rent or the salary of your staff.</p>
+<p>The variable cost <strong>VC</strong>, on the other hand, is related with the amount of selling units you produce, or the amount of customers acquired. Spending on a marketing campaign is an example of a variable cost since it only happens by acquiring customers. Another examples may be the cost involving sending a credit card to new customers, or the electricity involved in using machinery for producing selling items.</p>
+<p>Therefore, it may be too simplistic to use only the amount you spent on the marketing investment, you may want to use you total cost <strong>TC</strong> instead:</p>
+<div class="math notranslate nohighlight">
+\[TC = FC + VC\]</div>
+<p>Hence, the CAC function would be:</p>
+<div class="math notranslate nohighlight">
+\[CAC = \frac{TC}{CA}\]</div>
+</div>
+<p>One can also notice that the ratio of <span class="math notranslate nohighlight">\(CLV\)</span> to <span class="math notranslate nohighlight">\(CAC\)</span> is also important, it basically how much times expected value of that customer is greater than the cost to acquire that customer. The intuition of this relationship naturally bring us to the next basic concept.</p>
 </section>
 <section id="return-on-advertisement-spend">
-<h3>Return on Advertisement Spend<a class="headerlink" href="#return-on-advertisement-spend" title="Permalink to this heading">#</a></h3>
+<h3>Return on Advertisement Spend<a class="headerlink" href="#return-on-advertisement-spend" title="Link to this heading">#</a></h3>
 <p>The idea behind the return on some kind of investment has been around for a quite long time. Intuitively, one wants his investment in a given endeavor to return more profit than that given investment. You may already have heard of <em>Return on Investment</em> or <em>ROI</em> in the business world. Nevertheless, an investment in marketing is intrinsically tied up with some kind of <strong>risk</strong>. One cannot assure a return on a marketing investment, it can be very successful or a total failure. More complex even, something that worked out once may not work if applied twice, see for example what happened to Pepsi Crystal in the 1990s. Hence, it’s reasonable that in the 1990s terms like <em>ROMI</em> (<em>Return on Marketing Investment</em>) started to appear more often, since they tried to separate the usual investments made by the company from the more risky marketing efforts.</p>
 <p>Another important fact is that when we talk about ROMI we are usually talking about the <em>entire</em> marketing efforts. What does it mean? It means that if we have several marketing campaigns, we are usually talking about the effectiveness of them as a whole. ROMI is then defined as:</p>
 <div class="math notranslate nohighlight">
@@ -520,7 +548,7 @@ We can prove this as we take the limit of our <span class="math notranslate nohi
 <figure class="align-center" id="id4">
 <a class="reference internal image-reference" href="_images/12.jpg"><img alt="_images/12.jpg" src="_images/12.jpg" style="width: 442.40000000000003px; height: 306.8px;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 2 </span><span class="caption-text">ROAS for different CAC while maintaining CLV fixed</span><a class="headerlink" href="#id4" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 2 </span><span class="caption-text">ROAS for different CAC while maintaining CLV fixed</span><a class="headerlink" href="#id4" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 <div class="proof corollary admonition" id="corollary-3">
@@ -545,11 +573,12 @@ We can prove this as we take the limit of our <span class="math notranslate nohi
 <li><p>Winer, R. S., &amp; Neslin, S. A. (2014). The History Of Marketing Science. 	World Scientific, ISBN 9814596493, 9789814596497</p></li>
 </ol>
 <hr class="footnotes docutils" />
-<dl class="footnote brackets">
-<dt class="label" id="id2"><span class="brackets"><a class="fn-backref" href="#id1">1</a></span></dt>
-<dd><p>In this chapter and from here on we’ll use the term customer as the “success” event of a company. This can be either making a contract or selling a service, as in SaaS businesses, or making a sale for example. Not subscription-based companies make the calculation of some metrics a bit trickier, but the concepts are usually equally applicable.</p>
-</dd>
-</dl>
+<aside class="footnote-list brackets">
+<aside class="footnote brackets" id="id2" role="doc-footnote">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id1">1</a><span class="fn-bracket">]</span></span>
+<p>In this chapter and from here on we’ll use the term customer as the “success” event of a company. This can be either making a contract or selling a service, as in SaaS businesses, or making a sale for example. Not subscription-based companies make the calculation of some metrics a bit trickier, but the concepts are usually equally applicable.</p>
+</aside>
+</aside>
 </section>
 </section>
 </section>
@@ -579,11 +608,10 @@ We can prove this as we take the limit of our <span class="math notranslate nohi
 
               
               
-                <footer class="bd-footer-article">
+              
+              
+                <footer class="prev-next-footer d-print-none">
                   
-<div class="footer-article-items footer-article__inner">
-  
-    <div class="footer-article-item"><!-- Previous / next buttons -->
 <div class="prev-next-area">
     <a class="left-prev"
        href="intro.html"
@@ -603,17 +631,16 @@ We can prove this as we take the limit of our <span class="math notranslate nohi
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
-</div></div>
-  
 </div>
-
                 </footer>
               
             </div>
             
             
               
-                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
 
   <div class="sidebar-secondary-item">
   <div class="page-toc tocsection onthispage">
@@ -649,9 +676,10 @@ By Pedro Henrique Cardoso
   
   <div class="footer-item">
     
+
   <p class="copyright">
     
-      © Copyright 2022.
+      © Copyright 2023.
       <br/>
     
   </p>
@@ -675,8 +703,8 @@ By Pedro Henrique Cardoso
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
-<script src="_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+  <script defer src="_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
+<script defer src="_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
 
   <footer class="bd-footer">
   </footer>

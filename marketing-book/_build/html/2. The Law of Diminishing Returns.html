@@ -1,13 +1,12 @@
 
-
 <!DOCTYPE html>
 
 
-<html lang="en" >
+<html lang="en" data-content_root="./" >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <title>Chapter 2: The Law of Diminishing Returns &#8212; Applied Data Science in Marketing</title>
   
@@ -15,48 +14,49 @@
   
   <script data-cfasync="false">
     document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
-    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
   </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
-<link href="_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
-<link href="_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link href="_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
 
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=a3416100" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="_static/proof.css?v=b4b7a797" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
   
-  <link href="_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
-  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
-
-    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
-    <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
-    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
-    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
-    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
-    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="_static/proof.css" />
-    <link rel="stylesheet" type="text/css" href="_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
-  
+  <!-- So that users can add custom icons -->
+  <script src="_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
-<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
 
-    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
-    <script src="_static/jquery.js"></script>
-    <script src="_static/underscore.js"></script>
-    <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
-    <script src="_static/doctools.js"></script>
-    <script src="_static/clipboard.min.js"></script>
-    <script src="_static/copybutton.js"></script>
-    <script src="_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script src="_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="_static/doctools.js?v=9a2dae69"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="_static/copybutton.js?v=f281be69"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
-    <script src="_static/togglebutton.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="_static/togglebutton.js?v=4a39c7ea"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
-    <script src="_static/design-tabs.js"></script>
+    <script src="_static/design-tabs.js?v=36754332"></script>
     <script async="async" src="https://www.googletagmanager.com/gtag/js?id=G-C73ZHNGTKY"></script>
     <script>
                 window.dataLayer = window.dataLayer || [];
@@ -64,15 +64,20 @@
                 gtag('js', new Date());
                 gtag('config', 'G-C73ZHNGTKY');
             </script>
-    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
-const thebe_selector = ".thebe,.cell"
-const thebe_selector_input = "pre"
-const thebe_selector_output = ".output, .cell_output"
-</script>
-    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){ dataLayer.push(arguments); }
+                gtag('js', new Date());
+                gtag('config', 'G-C73ZHNGTKY');
+            </script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.0/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = '2. The Law of Diminishing Returns';</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
     <link rel="canonical" href="https://phc4rdoso.github.io/2. The Law of Diminishing Returns.html" />
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
@@ -80,6 +85,7 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="prev" title="Chapter 1: Primer on Marketing Science" href="1.%20Primer%20on%20Marketing%20Science.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="" />
   </head>
   
   
@@ -87,23 +93,16 @@ const thebe_selector_output = ".output, .cell_output"
 
   
   
-  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
   
-  <input type="checkbox"
-          class="sidebar-toggle"
-          name="__primary"
-          id="__primary"/>
-  <label class="overlay overlay-primary" for="__primary"></label>
+  <div id="pst-scroll-pixel-helper"></div>
   
-  <input type="checkbox"
-          class="sidebar-toggle"
-          name="__secondary"
-          id="__secondary"/>
-  <label class="overlay overlay-secondary" for="__secondary"></label>
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
   
-  <div class="search-button__wrapper">
-    <div class="search-button__overlay"></div>
-    <div class="search-button__search-container">
+  <dialog id="pst-search-dialog">
+    
 <form class="bd-search d-flex align-items-center"
       action="search.html"
       method="get">
@@ -111,7 +110,6 @@ const thebe_selector_output = ".output, .cell_output"
   <input type="search"
          class="form-control"
          name="q"
-         id="search-input"
          placeholder="Search this book..."
          aria-label="Search this book..."
          autocomplete="off"
@@ -119,16 +117,25 @@ const thebe_selector_output = ".output, .cell_output"
          autocapitalize="off"
          spellcheck="false"/>
   <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
-</form></div>
-  </div>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
   
-    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
-    </nav>
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
   
+
   <div class="bd-container">
     <div class="bd-container__inner bd-page-width">
       
-      <div class="bd-sidebar-primary bd-sidebar">
+      
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
         
 
   
@@ -141,9 +148,13 @@ const thebe_selector_output = ".output, .cell_output"
   
     <div class="sidebar-primary-items__start sidebar-primary__section">
         <div class="sidebar-primary-item">
+
+  
+    
   
 
 <a class="navbar-brand logo" href="intro.html">
+  
   
   
   
@@ -153,12 +164,19 @@ const thebe_selector_output = ".output, .cell_output"
       
     
     
-    <img src="_static/logo.png" class="logo__image only-light" alt="Logo image"/>
-    <script>document.write(`<img src="_static/logo.png" class="logo__image only-dark" alt="Logo image"/>`);</script>
+    <img src="_static/logo.png" class="logo__image only-light" alt="Applied Data Science in Marketing - Home"/>
+    <img src="_static/logo.png" class="logo__image only-dark pst-js-only" alt="Applied Data Science in Marketing - Home"/>
   
   
 </a></div>
-        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+        <div class="sidebar-primary-item">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         
         <ul class="nav bd-sidenav bd-sidenav__home-link">
@@ -201,14 +219,19 @@ const thebe_selector_output = ".output, .cell_output"
   
   
   <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
   </div>
-  
-  <div id="rtd-footer-container"></div>
 
 
       </div>
       
-      <main id="main-content" class="bd-main">
+      <main id="main-content" class="bd-main" role="main">
         
         
 
@@ -217,14 +240,14 @@ const thebe_selector_output = ".output, .cell_output"
           <div class="bd-content">
             <div class="bd-article-container">
               
-              <div class="bd-header-article">
+              <div class="bd-header-article d-print-none">
 <div class="header-article-items header-article__inner">
   
     <div class="header-article-items__start">
       
-        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
   <span class="fa-solid fa-bars"></span>
-</label></div>
+</button></div>
       
     </div>
   
@@ -346,26 +369,20 @@ const thebe_selector_output = ".output, .cell_output"
 </button>
 
 
-<script>
-document.write(`
-  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
-    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
-    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
-  </button>
-`);
-</script>
 
-<script>
-document.write(`
-  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="fa-solid fa-magnifying-glass"></i>
-  </button>
-`);
-</script>
-<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button>
+
+
+<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+</button>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <span class="fa-solid fa-list"></span>
-</label>
+</button>
 </div></div>
       
     </div>
@@ -400,16 +417,16 @@ document.write(`
               
                 
 <div id="searchbox"></div>
-                <article class="bd-article" role="main">
+                <article class="bd-article">
                   
   <p><img alt="" src="_images/chapter-2-cover.png" /></p>
 <section class="tex2jax_ignore mathjax_ignore" id="chapter-2-the-law-of-diminishing-returns">
-<h1>Chapter 2: The Law of Diminishing Returns<a class="headerlink" href="#chapter-2-the-law-of-diminishing-returns" title="Permalink to this heading">#</a></h1>
+<h1>Chapter 2: The Law of Diminishing Returns<a class="headerlink" href="#chapter-2-the-law-of-diminishing-returns" title="Link to this heading">#</a></h1>
 <blockquote>
 <div><p><em>Keywords for this chapter: Diminishing Returns, Marginal Returns, Marginal ROAS, Market Saturation, Elasticity</em></p>
 </div></blockquote>
 <section id="the-non-linearity-of-investments">
-<h2>The Non-linearity of Investments<a class="headerlink" href="#the-non-linearity-of-investments" title="Permalink to this heading">#</a></h2>
+<h2>The Non-linearity of Investments<a class="headerlink" href="#the-non-linearity-of-investments" title="Link to this heading">#</a></h2>
 <p>An interesting behavior can be noticed on the <span class="math notranslate nohighlight">\(\text{ROAS}\)</span> calculation: we expect that the <span class="math notranslate nohighlight">\(\text{CLV}\)</span> of our customers is stable, whilst this is not the same for the <span class="math notranslate nohighlight">\(\text{CAC}\)</span>. Consequently, there is a point at which investing more will give no returns, for instance, when <span class="math notranslate nohighlight">\(\text{ROAS} &lt;1\)</span>. That’s exactly why our <span class="math notranslate nohighlight">\(\text{ROAS}\)</span> will tend to zero.</p>
 <p>Several economists have studied why that is the case, but one known factor is marketing saturation. An interesting case that illustrates this is what happened to a magazine called <em>Sports Illustrated</em> published for the first time in 1954. Since its first publication, it started to increase until reached 3.5 million subscribers by the end of the 1980s. One can imagine that decades later it may have doubled the amount of subscribers. Interestingly, after many years of investment, it reached its natural limit (3.5 million) where it remained at least until the 2000s. Thomas G. Osenton author of <em>Death of Demand</em> explains this very briefly:</p>
 <blockquote class="epigraph">
@@ -421,7 +438,7 @@ document.write(`
 <figure class="align-default" id="markdown-fig">
 <img alt="investmentxreturn" src="_images/21.jpg" />
 <figcaption>
-<p><span class="caption-number">Fig. 3 </span><span class="caption-text">Left: S-shaped curve, represents businesses that have a slower growth at a low level of investments, increase quickly, and then saturate. Right: The concave curve represents businesses that grow quickly at the first investments but after a certain amount of investment grow at a decreasing rate.</span><a class="headerlink" href="#markdown-fig" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 3 </span><span class="caption-text">Left: S-shaped curve, represents businesses that have a slower growth at a low level of investments, increase quickly, and then saturate. Right: The concave curve represents businesses that grow quickly at the first investments but after a certain amount of investment grow at a decreasing rate.</span><a class="headerlink" href="#markdown-fig" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 <p>We can exemplify this with the curves shown in Fig 3, in each case there can be seen a point on which investing further will give not much more return when compared with keeping the investment as it is. In both cases, there is a point on which the market is saturated and the <span class="math notranslate nohighlight">\(\text{ROAS}\)</span> is not as it was when we started to invest. That makes sense, in most cases, when we start to invest the first people to convert are the ones that are more prone to be customers, meaning that they have a lower <span class="math notranslate nohighlight">\(\text{CAC}\)</span>. Similarly, we expect that as we keep investing, the easily converted customers will already be converted, leaving only customers that cannot be converted as easily. These will require more effort (e.g. being exposed to an advertisement more times) which in turn means a higher <span class="math notranslate nohighlight">\(\text{CAC}\)</span>.</p>
@@ -432,7 +449,7 @@ document.write(`
 <p>Naturally, after understanding how returns start to diminish after some time, one can think about when is the best moment to stop investing. To analyze this, we’ll introduce a new concept.</p>
 </section>
 <section id="marginal-returns">
-<h2>Marginal Returns<a class="headerlink" href="#marginal-returns" title="Permalink to this heading">#</a></h2>
+<h2>Marginal Returns<a class="headerlink" href="#marginal-returns" title="Link to this heading">#</a></h2>
 <p>The question of whether one should keep investing has an intrinsic relationship with the future. Will I earn more if I invest more? What is the expected return for the next dollar invested? The answer to this question often requires assuming that our <span class="math notranslate nohighlight">\(\text{Return}\)</span> function follows a parametric form, that is, a specific shape. Let’s take, for instance, the s-shaped growth curve in Fig 3. We can write it, for the sake of simplicity, as the standard logistic function:</p>
 <div class="math notranslate nohighlight">
 \[\tag{2.2} f(x) = \frac{1}{1+e^{-x}} = \frac{e^x}{1+e^x}\]</div>
@@ -443,7 +460,7 @@ document.write(`
 <figure class="align-center" id="id1">
 <a class="reference internal image-reference" href="_images/22.jpg"><img alt="_images/22.jpg" src="_images/22.jpg" style="width: 416.40000000000003px; height: 286.0px;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 4 </span><span class="caption-text">Marginal return or marginal ROAS for several investment levels.</span><a class="headerlink" href="#id1" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 4 </span><span class="caption-text">Marginal return or marginal ROAS for several investment levels.</span><a class="headerlink" href="#id1" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 <p>Now, let’s think about these results for a little. When we took the derivative, we made some kind of division, that is:</p>
@@ -478,14 +495,14 @@ document.write(`
 <figure class="align-center" id="id2">
 <a class="reference internal image-reference" href="_images/23.jpg"><img alt="_images/23.jpg" src="_images/23.jpg" style="width: 710.4px; height: 228.6px;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 5 </span><span class="caption-text">Return, ROAS, and mROAS for an investment of 500</span><a class="headerlink" href="#id2" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 5 </span><span class="caption-text">Return, ROAS, and mROAS for an investment of 500</span><a class="headerlink" href="#id2" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 <p>In the figure above we can see the relationship between our <span class="math notranslate nohighlight">\(\text{Return}\)</span>, <span class="math notranslate nohighlight">\(\text{ROAS}\)</span>, and <span class="math notranslate nohighlight">\(\text{mROAS}\)</span> which may not be obvious at first. However, it is important to state that this is very relative to the shape that we assume our <span class="math notranslate nohighlight">\(f(x)\)</span> to have.</p>
 </section>
 </div></section>
 <section id="point-of-diminishing-returns">
-<h2>Point of Diminishing Returns<a class="headerlink" href="#point-of-diminishing-returns" title="Permalink to this heading">#</a></h2>
+<h2>Point of Diminishing Returns<a class="headerlink" href="#point-of-diminishing-returns" title="Link to this heading">#</a></h2>
 <p>Another important point on the curve in Fig 4 is the point of maximum marginal return. We can see that before that given point, the marginal return is increasing, and after that point, it starts to decrease. What is the exact meaning of this threshold? We can this point <em>the point of diminishing returns</em> and is the point on which we start to observe our results diminishing.</p>
 <p>Obviously, that point depends on the form that we assume our curve to have, and depending on its format, it will not always have a straightforward point of diminishing returns. Why that is the case? Well, the point of diminishing returns is the point on which the curve changes its concavity from up to down, and not all curves have this property (e.g. the curve on the right in Fig 3) since some of them already diminish from the start. However, when this point exists, we can find it by taking the second derivative of the investment-return curve. Let’s go back to our example in equation 2.2 and calculate the second derivative of it:</p>
 <div class="math notranslate nohighlight">
@@ -500,7 +517,7 @@ document.write(`
 <figure class="align-center" id="id3">
 <a class="reference internal image-reference" href="_images/24.jpg"><img alt="_images/24.jpg" src="_images/24.jpg" style="width: 416.40000000000003px; height: 286.0px;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 6 </span><span class="caption-text">2nd derivative of the return function. The point on which y=0 is the point of diminishing returns</span><a class="headerlink" href="#id3" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 6 </span><span class="caption-text">2nd derivative of the return function. The point on which y=0 is the point of diminishing returns</span><a class="headerlink" href="#id3" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 <div class="proof example admonition" id="example-1">
@@ -519,14 +536,14 @@ document.write(`
 <figure class="align-center" id="id4">
 <a class="reference internal image-reference" href="_images/25.jpg"><img alt="_images/25.jpg" src="_images/25.jpg" style="width: 710.4px; height: 228.6px;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 7 </span><span class="caption-text">Point of diminishing returns for an s-shaped curve.</span><a class="headerlink" href="#id4" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 7 </span><span class="caption-text">Point of diminishing returns for an s-shaped curve.</span><a class="headerlink" href="#id4" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 </section>
 </div><p>The point of diminishing returns is not necessarily the point on which we must stop investing further, however, it is important to know when we expect our returns to start to diminish. Treat it like the peak of a roller coaster, it is a worth to remembered moment, but doesn’t mean that the ride is over yet.</p>
 </section>
 <section id="advertising-elasticity-of-return">
-<h2>Advertising Elasticity of Return<a class="headerlink" href="#advertising-elasticity-of-return" title="Permalink to this heading">#</a></h2>
+<h2>Advertising Elasticity of Return<a class="headerlink" href="#advertising-elasticity-of-return" title="Link to this heading">#</a></h2>
 <p>The last important concept that we’ll describe is related to how much more <span class="math notranslate nohighlight">\(\%\text{Return}\)</span> we expect back if we increase a given <span class="math notranslate nohighlight">\(\%\text{Investment}\)</span>. When we are interested in measuring the responsiveness of one variable over another, we are talking about measuring our elasticity. In our case, for instance, one can imagine: if I increase my <span class="math notranslate nohighlight">\(\text{Investment}\)</span> in <span class="math notranslate nohighlight">\(1\%\)</span>, what will be the response in <span class="math notranslate nohighlight">\(\text{Return}\)</span>?</p>
 <p>To measure the elasticity, that is, the responsiveness of our curve, we must have a starting point in <span class="math notranslate nohighlight">\(\text{Investment}\)</span> from which we want to move on. From that point, we measure the difference between our starting point and the desired point of investment, <span class="math notranslate nohighlight">\(\Delta\text{Investment}\)</span>, and the difference between the <span class="math notranslate nohighlight">\(\text{Return}\)</span> at that point and the desired point, <span class="math notranslate nohighlight">\(\Delta\text{Return}\)</span>. With that information, we calculate the elasticity as:</p>
 <div class="math notranslate nohighlight">
@@ -552,6 +569,7 @@ document.write(`
 <ul class="simple">
 <li><p>Means that the increase in <span class="math notranslate nohighlight">\(\%\text{Return}\)</span> was greater than increase in <span class="math notranslate nohighlight">\(\%\text{Investment}\)</span>. This is the best scenario for investing, and it is expected way before the point of diminishing returns.</p></li>
 </ul>
+<p>One may interpret this as: if I increase investment by 1% the revenue will increase by <span class="math notranslate nohighlight">\(\epsilon\)</span>%</p>
 </div>
 <div class="proof example admonition" id="example-2">
 <p class="admonition-title"><span class="caption-number">Example 5 </span></p>
@@ -583,7 +601,7 @@ document.write(`
 </ul>
 </section>
 <section id="conclusion">
-<h2>Conclusion<a class="headerlink" href="#conclusion" title="Permalink to this heading">#</a></h2>
+<h2>Conclusion<a class="headerlink" href="#conclusion" title="Link to this heading">#</a></h2>
 <p>We started by understanding that the return on investment is not linear since we expect a saturation effect. Afterwards we understood the effect of diminishing returns and how the marginal return on spend <span class="math notranslate nohighlight">\(\text{(mROAS})\)</span> reflect the return saturation. We learned how to find the point on which our returns start to diminish and how to measure the responsiveness of an increase in <span class="math notranslate nohighlight">\(\text{Investment}\)</span>.</p>
 <p>You might be wondering how to calculate your own <span class="math notranslate nohighlight">\(\text{Return}\)</span> curves, which is an important topic that will be covered later. However, firstly we must be able to correctly attribute a sale (or any success event) to the correct marketing campaign. Therefore, we’ll take a look at how attribution models work.</p>
 <p><strong>Bibliography:</strong></p>
@@ -619,11 +637,10 @@ document.write(`
 
               
               
-                <footer class="bd-footer-article">
+              
+              
+                <footer class="prev-next-footer d-print-none">
                   
-<div class="footer-article-items footer-article__inner">
-  
-    <div class="footer-article-item"><!-- Previous / next buttons -->
 <div class="prev-next-area">
     <a class="left-prev"
        href="1.%20Primer%20on%20Marketing%20Science.html"
@@ -643,17 +660,16 @@ document.write(`
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
-</div></div>
-  
 </div>
-
                 </footer>
               
             </div>
             
             
               
-                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
 
   <div class="sidebar-secondary-item">
   <div class="page-toc tocsection onthispage">
@@ -687,9 +703,10 @@ By Pedro Henrique Cardoso
   
   <div class="footer-item">
     
+
   <p class="copyright">
     
-      © Copyright 2022.
+      © Copyright 2023.
       <br/>
     
   </p>
@@ -713,8 +730,8 @@ By Pedro Henrique Cardoso
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
-<script src="_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+  <script defer src="_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
+<script defer src="_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
 
   <footer class="bd-footer">
   </footer>
